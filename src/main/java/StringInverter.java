@@ -1,10 +1,8 @@
 public class StringInverter implements StringTransformer {
     public void execute(StringDrink drink) {
-        char[] text = drink.getText().toCharArray();
+        String text = drink.getText();
         StringBuilder inverted = new StringBuilder();
-        for (int i = text.length - 1; i >= 0; i--) {
-            inverted.append(text[i]);
-        }
+        inverted.append(text).reverse();
         drink.setText(inverted.toString());
     }
 }
